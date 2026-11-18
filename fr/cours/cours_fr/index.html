@@ -1,0 +1,1464 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A structured C programming study guide">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>C — Cours de base - C Programming Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-cours-de-base" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="C Programming Course" class="md-header__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C Programming Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C — Cours de base
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="C Programming Course" class="md-nav__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    C Programming Course
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Français
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Français
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Cours principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aller-plus-loin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../en/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/course/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Core course
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../en/beyond-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-programmer-et-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Programmer et compiler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-types-et-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Variables, types et expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables, types et expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree-et-sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée et sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opérateurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conditions-et-boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conditions et boucles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-algorithmes-elementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Algorithmes élémentaires
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Algorithmes élémentaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accumuler-et-compter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accumuler et compter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-maximum-et-moyenne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum, maximum et moyenne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#echanger-deux-valeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Échanger deux valeurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chiffres-dun-entier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chiffres d'un entier
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tableaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tableaux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Tableaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tableaux-multidimensionnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tableaux multidimensionnels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fonctions-et-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fonctions et procédures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Fonctions et procédures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plusieurs-resultats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plusieurs résultats
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recursivite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Récursivité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pointeurs-et-adresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pointeurs et adresses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pointeurs et adresses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetique-de-pointeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmétique de pointeurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const-avec-pointeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        const avec pointeurs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Chaînes de caractères
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-allocation-dynamique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Allocation dynamique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-structures-et-typedef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Structures et typedef
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-fonctions-de-bibliotheque-callbacks-et-qsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Fonctions de bibliothèque, callbacks et qsort
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-listes-chainees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Listes chaînées
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-recherche-et-tri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Recherche et tri
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Recherche et tri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recherches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recherches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tris-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tris de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tris-avances-vus-dans-le-perimetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tris avancés vus dans le périmètre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-fichiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Fichiers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-checklist-domaines-couverts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Checklist : domaines couverts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-exercices-de-calcul-et-de-chaines-a-connaitre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Exercices de calcul et de chaînes à connaître
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Exercices de calcul et de chaînes à connaître">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pgcd-ppcm-et-nombres-premiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PGCD, PPCM et nombres premiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#racines-dun-trinome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Racines d'un trinôme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-et-ecart-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variance et écart-type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palindrome-et-inversion-de-chaine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Palindrome et inversion de chaîne
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-structures-courantes-regles-et-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Structures courantes : règles et validations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-matrices-et-tableaux-dynamiques-operations-supplementaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Matrices et tableaux dynamiques : opérations supplémentaires
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-liste-de-verification-detaillee-des-exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Liste de vérification détaillée des exercices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-et-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crédit et provenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="c-cours-de-base">C — Cours de base</h1>
+<blockquote>
+<p>Ce document est un support de révision original, organisé pour couvrir les thèmes des exercices de programmation C fournis. Il s'appuie sur les sujets du cours de Tatiana Aubonnet, sans reproduire ses diapositives.</p>
+</blockquote>
+<h2 id="0-programmer-et-compiler">0. Programmer et compiler</h2>
+<p>Un programme suit généralement ce cycle : comprendre le problème, définir les entrées/sorties, choisir un algorithme, coder, compiler, tester et corriger.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcc<span class="w"> </span>-std<span class="o">=</span>c11<span class="w"> </span>-Wall<span class="w"> </span>-Wextra<span class="w"> </span>-Wpedantic<span class="w"> </span>-g<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>main
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>./main
+</span></code></pre></div>
+<ul>
+<li><code>-std=c11</code> : utiliser la norme C11.</li>
+<li><code>-Wall -Wextra -Wpedantic</code> : activer les avertissements utiles.</li>
+<li><code>-g</code> : informations de débogage.</li>
+</ul>
+<p>Un programme minimal :</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="1-variables-types-et-expressions">1. Variables, types et expressions</h2>
+<p>Une variable possède un type, un nom, une valeur et une durée de vie. En C, les types courants sont <code>char</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code> et les types dérivés. Utiliser <code>sizeof(type)</code> pour connaître la taille en octets (elle dépend de la plateforme).</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">moyenne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14.25</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">lettre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="entree-et-sortie">Entrée et sortie</h3>
+<p><code>printf</code> affiche ; <code>scanf</code> lit et doit recevoir l'adresse des variables à remplir.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Entrée invalide</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">printf</span><span class="p">(</span><span class="s">"n = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span></code></pre></div>
+Formats fréquents : <code>%d</code> / <code>%i</code> int, <code>%u</code> unsigned, <code>%ld</code> long, <code>%f</code> float/double à <code>printf</code>, <code>%lf</code> double à <code>scanf</code>, <code>%c</code> caractère, <code>%s</code> chaîne. Pour <code>printf</code>, un <code>double</code> se formate avec <code>%f</code>. Ne pas utiliser un format incompatible avec le type.</p>
+<h3 id="operateurs">Opérateurs</h3>
+<ul>
+<li>Arithmétiques : <code>+ - * / %</code> (<code>%</code> pour entiers).</li>
+<li>Comparaison : <code>== != &lt; &lt;= &gt; &gt;=</code> (une comparaison produit 0 ou 1).</li>
+<li>Logiques : <code>&amp;&amp; || !</code> (court-circuit).</li>
+<li>Affectation : <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>.</li>
+<li>Incrément : <code>++i</code>, <code>i++</code> (la valeur de l'expression diffère dans certains contextes).</li>
+<li>Conversion : <code>int x = (int)3.8;</code> tronque vers zéro.</li>
+</ul>
+<p>Attention à la division entière : <code>7 / 2</code> vaut <code>3</code>; <code>7.0 / 2</code> vaut <code>3.5</code>. Éviter les dépassements d'entiers et les divisions par zéro. Les priorités peuvent être rendues explicites avec des parenthèses.</p>
+<h2 id="2-conditions-et-boucles">2. Conditions et boucles</h2>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p><code>switch</code> convient à une sélection parmi des valeurs discrètes; chaque <code>case</code> se termine généralement par <code>break</code>.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* répétition connue */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* répéter tant que vrai */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* corps exécuté au moins une fois */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">);</span>
+</span></code></pre></div>
+<code>break</code> quitte la boucle ou le switch courant; <code>continue</code> passe à l'itération suivante. Vérifier les conditions d'arrêt pour éviter les boucles infinies.</p>
+<p><a href="../../exercices/fiches/01_Variables_Si_Boucles/">Fiche d'exercices — Variables, conditions et boucles</a></p>
+<h2 id="3-algorithmes-elementaires">3. Algorithmes élémentaires</h2>
+<h3 id="accumuler-et-compter">Accumuler et compter</h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="minimum-maximum-et-moyenne">Minimum, maximum et moyenne</h3>
+<p>Pour un tableau non vide, initialiser <code>min</code> et <code>max</code> à son premier élément, puis parcourir le reste. La moyenne se calcule avec une somme de type approprié et une division flottante : <code>(double)sum / n</code>. Ne jamais supposer que la somme tient forcément dans <code>int</code>.</p>
+<h3 id="echanger-deux-valeurs">Échanger deux valeurs</h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">swap_int</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="chiffres-dun-entier">Chiffres d'un entier</h3>
+<p>Le dernier chiffre d'un entier positif est <code>n % 10</code>; retirer ce chiffre avec <code>n /= 10</code>. Prévoir le cas zéro et les nombres négatifs, notamment <code>INT_MIN</code> qui ne peut pas être simplement nié dans un <code>int</code>.</p>
+<h2 id="4-tableaux">4. Tableaux</h2>
+<p>Un tableau statique contient des éléments du même type contigus en mémoire. Ses indices vont de <code>0</code> à <code>n-1</code>.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></code></pre></div>
+<p>Le C ne vérifie pas automatiquement les bornes. Tout accès hors limites est un comportement indéfini. Une fonction recevant un tableau doit aussi recevoir sa taille :</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_array</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="tableaux-multidimensionnels">Tableaux multidimensionnels</h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">}};</span>
+</span></code></pre></div>
+Parcours : boucle sur les lignes, puis les colonnes. En mémoire, un tableau C est rangé en ordre row-major (ligne par ligne). Pour une matrice carrée aplatie de dimension <code>N</code>, l'élément <code>(i,j)</code> correspond à <code>a[i * N + j]</code>.</p>
+<h2 id="5-fonctions-et-procedures">5. Fonctions et procédures</h2>
+<p>Une fonction encapsule une tâche et possède un type de retour. Une fonction <code>void</code> ne retourne pas de valeur. Les prototypes annoncent la signature avant utilisation.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Les arguments sont transmis par valeur : modifier un paramètre simple ne modifie pas la variable appelante. Pour modifier une variable de l'appelant, transmettre un pointeur. Les variables locales sont limitées à leur bloc. Éviter les variables globales pour l'état ordinaire.</p>
+<h3 id="plusieurs-resultats">Plusieurs résultats</h3>
+<p>Le C retourne une valeur unique directement. Pour produire plusieurs résultats, utiliser des paramètres pointeurs de sortie, une structure retournée, ou un tableau approprié.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="p">);</span>
+</span></code></pre></div>
+Toujours vérifier les préconditions (par exemple <code>n &gt; 0</code> et pointeurs valides).</p>
+<p><a href="../../exercices/fiches/02_Fonctions/">Fiche d'exercices — Fonctions</a></p>
+<h2 id="6-recursivite">6. Récursivité</h2>
+<p>Une fonction récursive s'appelle elle-même. Elle doit avoir :
+1. un cas de base qui s'arrête;
+2. un appel sur un problème plus petit;
+3. une progression vers le cas de base.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
+</span></code></pre></div>
+La récursion consomme la pile d'appels. Une profondeur trop grande peut épuiser la pile. Fibonacci naïf illustre la récursion, mais sa version récursive simple est très coûteuse; une version itérative est préférable pour calculer efficacement.</p>
+<h2 id="7-pointeurs-et-adresses">7. Pointeurs et adresses</h2>
+<p>Un pointeur contient une adresse d'objet (ou vaut <code>NULL</code>). <code>&amp;x</code> donne l'adresse de <code>x</code>; <code>*p</code> accède à l'objet pointé.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c1">// x devient 50</span>
+</span></code></pre></div>
+<p>Ne déréférencer qu'un pointeur valide, correctement aligné et pointant vers un objet vivant. <code>NULL</code> est une valeur sentinelle, pas une adresse utilisable. <code>%p</code> affiche une adresse : passer <code>(void *)p</code>.</p>
+<h3 id="arithmetique-de-pointeurs">Arithmétique de pointeurs</h3>
+<p>Si <code>p</code> pointe sur un élément d'un tableau, <code>p + 1</code> désigne l'élément suivant. L'arithmétique n'est valide qu'à l'intérieur du tableau ou juste après sa fin (sans déréférencer cette dernière position). L'indice <code>a[i]</code> équivaut à <code>*(a + i)</code>.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* lire *p */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="const-avec-pointeurs"><code>const</code> avec pointeurs</h3>
+<ul>
+<li><code>const int *p</code> : on ne modifie pas l'int via <code>p</code>.</li>
+<li><code>int *const p</code> : l'adresse stockée dans <code>p</code> ne change pas.</li>
+<li><code>const int *const p</code> : ni l'adresse ni la valeur pointée ne changent via ce nom.</li>
+</ul>
+<p><a href="../../exercices/fiches/03_Pointeurs/">Fiche d'exercices — Pointeurs</a></p>
+<h2 id="8-chaines-de-caracteres">8. Chaînes de caractères</h2>
+<p>Une chaîne C est un tableau de <code>char</code> terminé par <code>\0</code>. Sa capacité doit inclure ce caractère terminal.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ada"</span><span class="p">;</span>
+</span></code></pre></div>
+<code>strlen</code> compte les caractères avant <code>\0</code> (sans compter le terminateur). <code>strcmp</code> compare lexicographiquement; <code>strcpy</code> copie mais exige que la destination soit assez grande; <code>strcat</code> ajoute et exige aussi une capacité suffisante. Préférer des opérations dont la taille est contrôlée, et vérifier les retours des fonctions d'entrée.</p>
+<p>Pour lire une ligne :
+<div class="language-c highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">stdin</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* traiter */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+Attention : <code>fgets</code> peut conserver le <code>\n</code>; la ligne peut être tronquée si le tampon est trop petit. Les chaînes manipulées en place peuvent utiliser deux pointeurs : lecture et écriture, avec l'écriture toujours à une position ≤ lecture.</p>
+<h2 id="9-allocation-dynamique">9. Allocation dynamique</h2>
+<p><code>malloc</code> réserve des octets; <code>calloc</code> réserve et initialise à zéro; <code>realloc</code> ajuste une réservation; <code>free</code> libère. Les fonctions d'allocation retournent <code>NULL</code> en cas d'échec.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="cm">/* utiliser a */</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">free</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Toujours vérifier les calculs de taille (risque de débordement), la réussite de l'allocation et libérer chaque allocation exactement une fois. <code>realloc</code> : utiliser un pointeur temporaire pour ne pas perdre l'ancien bloc en cas d'échec.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realloc</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">new_n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* a reste valide : gérer l'échec */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>Un tableau dynamique à deux dimensions peut être représenté par un tableau de pointeurs (allocations séparées) ou par un bloc contigu. Le bloc contigu simplifie la libération et la localité mémoire.</p>
+<h2 id="10-structures-et-typedef">10. Structures et <code>typedef</code></h2>
+<p>Une structure regroupe des champs de types différents.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">}</span><span class="w"> </span><span class="n">Student</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Sam"</span><span class="p">,</span><span class="w"> </span><span class="mf">15.5</span><span class="p">};</span>
+</span></code></pre></div>
+Accéder aux champs avec <code>s.grade</code>; via un pointeur, utiliser <code>p-&gt;grade</code> (équivalent à <code>(*p).grade</code>). Les structures peuvent être passées par valeur ou par adresse. Utiliser un pointeur quand la fonction doit modifier l'objet ou éviter une copie.</p>
+<p>Structures courantes en exercices : point, rectangle, complexe, fraction, date, temps, étudiant, livre, compte, statistiques. Vérifier les invariants (ex. dénominateur non nul pour une fraction, solde et montants cohérents).</p>
+<p><a href="../../exercices/fiches/04_Fonctions-Structures/">Fiche d'exercices — Structures</a></p>
+<h2 id="11-fonctions-de-bibliotheque-callbacks-et-qsort">11. Fonctions de bibliothèque, callbacks et <code>qsort</code></h2>
+<p>Une fonction peut recevoir un pointeur vers une autre fonction (callback). Signature typique :</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">apply_one</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="p">)(</span><span class="kt">int</span><span class="p">));</span>
+</span></code></pre></div>
+<p><code>qsort</code> de <code>&lt;stdlib.h&gt;</code> prend une fonction de comparaison :</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">compare_ints</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// éviter x-y, qui peut déborder</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">}</span>
+</span></code></pre></div>
+Le comparateur retourne un nombre négatif, zéro ou positif. Ne pas retourner <code>x-y</code> pour des valeurs extrêmes. Pour ordre décroissant, inverser la logique de comparaison sans risque de débordement.</p>
+<p><a href="../../exercices/fiches/03_Pointeurs/">Fiche d'exercices — Callbacks et qsort</a></p>
+<h2 id="12-listes-chainees">12. Listes chaînées</h2>
+<p>Une liste simplement chaînée est constituée de nœuds contenant une donnée et un pointeur vers le nœud suivant. La tête peut être <code>NULL</code>.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">}</span><span class="w"> </span><span class="n">Node</span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>insertion en tête : nouveau nœud pointe vers l'ancienne tête, puis la tête change;</li>
+<li>insertion en queue : parcourir jusqu'au dernier nœud, ou conserver un pointeur de queue;</li>
+<li>suppression : relier le précédent au suivant et libérer le nœud retiré;</li>
+<li>longueur : parcourir en comptant;</li>
+<li>inversion : maintenir <code>prev</code>, <code>current</code>, <code>next</code>;</li>
+<li>fusion de listes triées : avancer les deux curseurs en choisissant le plus petit;</li>
+<li>cycle : tortue-lièvre de Floyd, deux pointeurs avançant à vitesses différentes.</li>
+</ul>
+<p>Les fonctions qui modifient la tête doivent recevoir <code>Node **head</code> ou retourner la nouvelle tête. Ne jamais utiliser un nœud après <code>free</code>.</p>
+<p><a href="../../exercices/fiches/06_Tri-Recherche-Listes/">Fiche d'exercices — Listes chaînées</a></p>
+<h2 id="13-recherche-et-tri">13. Recherche et tri</h2>
+<h3 id="recherches">Recherches</h3>
+<ul>
+<li>Séquentielle : parcourir chaque élément, <code>O(n)</code>.</li>
+<li>Dichotomique : tableau trié requis; réduire l'intervalle à chaque étape, <code>O(log n)</code>.</li>
+<li>Min/max : un seul parcours, <code>O(n)</code>.</li>
+<li>Two-sum par deux pointeurs : sur tableau trié, déplacer gauche/droite selon la somme.</li>
+</ul>
+<h3 id="tris-de-base">Tris de base</h3>
+<ul>
+<li>Sélection : choisir le minimum de la partie non triée, <code>O(n²)</code>.</li>
+<li>Insertion : insérer chaque élément dans le préfixe trié, <code>O(n²)</code> au pire, stable.</li>
+<li>Bulles : échanges adjacents; arrêt anticipé si aucune permutation, <code>O(n²)</code> au pire.</li>
+</ul>
+<h3 id="tris-avances-vus-dans-le-perimetre">Tris avancés vus dans le périmètre</h3>
+<ul>
+<li>Merge sort : diviser, trier, fusionner; <code>O(n log n)</code>, stable, mémoire auxiliaire.</li>
+<li>Quicksort : partitionner autour d'un pivot; moyenne <code>O(n log n)</code>, pire <code>O(n²)</code>.</li>
+<li>Counting sort : adapté à une plage entière limitée <code>[0,k]</code>; <code>O(n+k)</code>.</li>
+<li>Radix LSD : traiter les chiffres de droite à gauche avec un tri stable; adapté aux entiers non négatifs dans sa forme simple.</li>
+<li>Heap sort : construire un tas max, extraire; <code>O(n log n)</code>, en place, non stable.</li>
+<li>Quickselect : partitionner pour trouver le k-ième élément, sans trier tout le tableau.</li>
+<li>Déduplication : compacter les valeurs uniques d'un tableau trié en place.</li>
+</ul>
+<p><a href="../../exercices/fiches/06_Tri-Recherche-Listes/">Fiche d'exercices — Tri et recherche</a></p>
+<h2 id="14-fichiers">14. Fichiers</h2>
+<p>Les flux standard : <code>stdin</code>, <code>stdout</code>, <code>stderr</code>. Un fichier se manipule avec <code>FILE *</code> et <code>fopen</code>.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">,</span><span class="w"> </span><span class="s">"r"</span><span class="p">);</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">perror</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="cm">/* lecture */</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* gérer erreur */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+Modes : <code>r</code> lecture, <code>w</code> écriture/écrasement, <code>a</code> ajout; suffixe <code>b</code> pour binaire (<code>rb</code>, <code>wb</code>, etc.); <code>+</code> pour lecture/écriture. Vérifier chaque ouverture, lecture, écriture et fermeture.</p>
+<ul>
+<li>Texte : <code>fgets</code>, <code>fprintf</code>, <code>fputs</code>, <code>fgetc</code>.</li>
+<li>Binaire : <code>fread</code>, <code>fwrite</code>; ces opérations transfèrent des octets, pas un format portable universel pour structures (padding, endianness, tailles des types).</li>
+<li>Copier : boucle de lecture avec tampon puis écriture.</li>
+<li>CSV simple : parser une ligne et convertir en vérifiant les erreurs; CSV réel peut contenir guillemets et séparateurs échappés, donc un simple <code>strtok</code> ne gère pas tout.</li>
+<li><code>fseek</code>, <code>ftell</code> : déplacement et position dans les fichiers, sous réserve du mode et du type de fichier.</li>
+<li>Gestion d'erreurs : vérifier <code>ferror</code>, <code>feof</code> dans la bonne logique, et les retours des fonctions.</li>
+</ul>
+<p><a href="../../exercices/fiches/05_Fichiers/">Fiche d'exercices — Fichiers</a></p>
+<h2 id="15-checklist-domaines-couverts">15. Checklist : domaines couverts</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Variables, conversions, expressions, I/O, conditions, boucles</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Tableaux 1D/2D, somme, moyenne, min/max, matrice, trace/transposition</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fonctions, procédures, paramètres de sortie, récursivité</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Pointeurs, pointeurs doubles, <code>const</code>, arithmétique, callbacks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Chaînes, longueur, copie, recherche, tokenisation, manipulation en place</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Allocation, réallocation, libération, tableaux dynamiques</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Structures, tableaux de structures, pointeurs sur structures</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Listes chaînées : opérations, fusion, inversion, cycle</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Recherche, tris, sélection, déduplication</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fichiers texte et binaires, CSV simple, copie, transformation, statistiques</li>
+</ul>
+<h2 id="16-exercices-de-calcul-et-de-chaines-a-connaitre">16. Exercices de calcul et de chaînes à connaître</h2>
+<h3 id="pgcd-ppcm-et-nombres-premiers">PGCD, PPCM et nombres premiers</h3>
+<p>Le PGCD peut se calculer par l'algorithme d'Euclide : tant que <code>b != 0</code>, remplacer <code>(a,b)</code> par <code>(b,a%b)</code>. Le dernier <code>a</code> non nul est le PGCD. Le PPCM (si les valeurs sont traitées sans débordement) est <code>a / pgcd(a,b) * b</code> ; diviser avant de multiplier réduit le risque de dépassement.</p>
+<p>Pour tester la primalité de <code>n</code>, traiter les cas <code>n &lt; 2</code>, puis essayer les diviseurs jusqu'à <code>d*d &gt; n</code> (ou une condition équivalente évitant le débordement). Le prochain premier consiste à avancer et retester.</p>
+<h3 id="racines-dun-trinome">Racines d'un trinôme</h3>
+<p>Pour <code>ax² + bx + c = 0</code>, si <code>a == 0</code>, traiter une équation linéaire. Sinon calculer <code>Δ = b² - 4ac</code>. <code>Δ &gt; 0</code> donne deux racines réelles, <code>Δ == 0</code> une racine double, <code>Δ &lt; 0</code> aucune racine réelle. Vérifier les divisions et les limites numériques.</p>
+<h3 id="variance-et-ecart-type">Variance et écart-type</h3>
+<p>Pour une population de <code>n</code> valeurs, la moyenne est <code>μ = Σxᵢ/n</code>; la variance population est <code>Σ(xᵢ-μ)²/n</code>, et l'écart-type est la racine carrée de la variance. Une formule en deux passes est simple à comprendre. Pour de grandes données ou valeurs très proches, une méthode numérique plus stable peut être préférable.</p>
+<h3 id="palindrome-et-inversion-de-chaine">Palindrome et inversion de chaîne</h3>
+<p>Comparer les caractères depuis les deux extrémités en progressant vers le centre. Si l'exercice ignore espaces et casse, normaliser chaque caractère avant comparaison. Pour inverser en place, échanger les caractères aux extrémités jusqu'à ce que les curseurs se croisent; la chaîne doit être modifiable.</p>
+<p><a href="../../exercices/fiches/01_Variables_Si_Boucles/">Fiche d'exercices — Calculs et chaînes</a></p>
+<h2 id="17-structures-courantes-regles-et-validations">17. Structures courantes : règles et validations</h2>
+<ul>
+<li><strong>Point / rectangle / cercle / boîte</strong> : calculs géométriques; vérifier dimensions et rayons non négatifs.</li>
+<li><strong>Complexe</strong> : addition champ par champ; module <code>sqrt(re*re + im*im)</code>.</li>
+<li><strong>Fraction</strong> : dénominateur non nul; normaliser avec PGCD; garder un signe cohérent (par exemple dénominateur positif).</li>
+<li><strong>Date</strong> : tester année bissextile; valider le nombre de jours du mois; calculer le jour de l'année par somme des mois précédents.</li>
+<li><strong>Temps</strong> : normaliser secondes/minutes en reportant les dépassements; définir si les heures sont modulo 24.</li>
+<li><strong>RGB</strong> : chaque canal est compris entre 0 et 255; conversion en gris doit préciser la formule/approximation utilisée.</li>
+<li><strong>Polynôme</strong> : évaluer <code>a*x*x + b*x + c</code>.</li>
+<li><strong>Statistiques</strong> : calculer min/max/moyenne/variance en parcourant les données et traiter <code>n == 0</code>.</li>
+<li><strong>Compte bancaire</strong> : vérifier montants positifs, fonds suffisants pour retrait, et succès/échec clairement signalé. Pour de vrais montants monétaires, éviter les calculs naïfs en <code>double</code>.</li>
+</ul>
+<h2 id="18-matrices-et-tableaux-dynamiques-operations-supplementaires">18. Matrices et tableaux dynamiques : opérations supplémentaires</h2>
+<p>La trace d'une matrice carrée est la somme de sa diagonale <code>A[i][i]</code>. La transposition échange <code>A[i][j]</code> avec <code>A[j][i]</code> pour <code>j &gt; i</code> dans une matrice carrée en place. Le produit matrice-vecteur calcule chaque ligne par somme des produits. Pour une matrice aplatie, toujours utiliser une formule d'indexation unique et documenter la dimension.</p>
+<p>Pour <code>push_back</code> sur un tableau dynamique, si la capacité est pleine, augmenter la capacité (souvent par doublement), utiliser <code>realloc</code> via un pointeur temporaire, puis ajouter l'élément et mettre à jour la taille. Distinguer <code>size</code> (éléments utilisés) de <code>capacity</code> (espace réservé).</p>
+<h2 id="19-liste-de-verification-detaillee-des-exercices">19. Liste de vérification détaillée des exercices</h2>
+<p>Cette liste regroupe les sujets visibles dans les six PDF d'exercices : affichage et calculs, conversion Celsius/Fahrenheit, maxima, pair/impair, racines, tables, factorielle, Fibonacci, somme de 1 à n, chiffres inversés/compte des chiffres, primalité, PGCD/PPCM, fonctions et récursivité, somme/moyenne/min/max, recherches séquentielle et dichotomique, tris sélection/insertion/bulles/fusion/rapide/comptage/radix/tas, quickselect, déduplication, two-sum, pointeurs et paramètres de sortie, chaînes (longueur/copie/voyelles/espaces/palindrome/inversion/tokenisation), matrices (trace/transposition/produit/indexation aplatie), callbacks et <code>qsort</code>, structures (point, rectangle, complexe, fraction, étudiant, temps, date, RGB, polynôme, cercle, matrice, livre, boîte, statistiques, personne, compte), listes (insertion tête/queue, suppression, longueur, inversion, fusion, cycle), fichiers (texte, append, copie binaire, compteurs, motifs, remplacement, fusion triée, CSV, données binaires, structures binaires, découpage, tri/dédoublonnage, comparaison, tail, CRLF/LF, checksum, histogramme octets, reverse et préfixe).</p>
+<p><a href="../../exercices/">Pratiquer avec les exercices</a></p>
+<hr />
+<h2 id="credit-et-provenance">Crédit et provenance</h2>
+<p>Support de révision réalisé à partir du cours de <strong>Tatiana Aubonnet</strong> (C, 2008), en s'appuyant principalement sur les exercices partagés par <a href="https://github.com/S-L-A-K-E-R"><strong>S-L-A-K-E-R</strong></a>, qui ont particulièrement contribué à définir les notions abordées et la structure de ce support.</p>
+<p>Adaptation, organisation et rédaction : <a href="https://github.com/1KuMo"><strong>1KuMo</strong></a>.</p>
+<p>Des outils d'intelligence artificielle ont également été utilisés pour assister la traduction, la mise en page et l'organisation du contenu.</p>
+<p>Merci à <strong>Tatiana Aubonnet</strong> pour son cours original, qui a servi de base à ce travail.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "search.highlight", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

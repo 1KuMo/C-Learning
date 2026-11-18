@@ -1,0 +1,1966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A structured C programming study guide">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../exercises/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>C - Core course - C Programming Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-core-course" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="C Programming Course" class="md-header__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C Programming Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C - Core course
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="C Programming Course" class="md-nav__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    C Programming Course
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../fr/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Français
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Français
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fr/cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Cours principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fr/exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fr/aller-plus-loin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Core course
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Core course
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-programming-and-compiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Programming and compiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-types-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Variables, types, and expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables, types, and expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input and output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conditions-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conditions and loops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elementary-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Elementary algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Elementary algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accumulate-and-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accumulate and count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-maximum-and-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum, maximum, and average
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-two-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swap two values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integer digits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Arrays
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multidimensional arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-functions-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Functions and procedures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Functions and procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Recursion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pointers-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pointers and addresses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pointers and addresses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pointer-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pointer arithmetic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const-and-pointers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        const and pointers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Strings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-dynamic-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Dynamic allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-structures-and-typedef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Structures and typedef
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-library-functions-callbacks-and-qsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Library functions, callbacks, and qsort
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Linked lists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-searching-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Searching and sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Searching and sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-sorts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic sorts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-sorts-in-the-exercise-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced sorts in the exercise scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-coverage-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Coverage checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-additional-calculation-and-string-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Additional calculation and string exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Additional calculation and string exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gcd-lcm-and-primes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCD, LCM, and primes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadratic-roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadratic roots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-and-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variance and standard deviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palindrome-and-string-reversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Palindrome and string reversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-common-structures-rules-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Common structures: rules and validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-matrices-and-dynamic-arrays-additional-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Matrices and dynamic arrays: additional operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-detailed-exercise-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Detailed exercise coverage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits-and-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits and Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beyond-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-programming-and-compiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0. Programming and compiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-types-and-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Variables, types, and expressions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables, types, and expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input-and-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input and output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conditions-and-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conditions and loops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elementary-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Elementary algorithms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Elementary algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accumulate-and-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accumulate and count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minimum-maximum-and-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Minimum, maximum, and average
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap-two-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Swap two values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integer digits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Arrays
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multidimensional-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multidimensional arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-functions-and-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Functions and procedures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Functions and procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Recursion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pointers-and-addresses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Pointers and addresses
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Pointers and addresses">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pointer-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pointer arithmetic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const-and-pointers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        const and pointers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Strings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-dynamic-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Dynamic allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-structures-and-typedef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Structures and typedef
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-library-functions-callbacks-and-qsort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Library functions, callbacks, and qsort
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-linked-lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Linked lists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-searching-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Searching and sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Searching and sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Searching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-sorts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic sorts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-sorts-in-the-exercise-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced sorts in the exercise scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-coverage-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Coverage checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-additional-calculation-and-string-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Additional calculation and string exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Additional calculation and string exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gcd-lcm-and-primes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCD, LCM, and primes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadratic-roots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadratic roots
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-and-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variance and standard deviation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palindrome-and-string-reversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Palindrome and string reversal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-common-structures-rules-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Common structures: rules and validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-matrices-and-dynamic-arrays-additional-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Matrices and dynamic arrays: additional operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-detailed-exercise-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Detailed exercise coverage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits-and-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits and Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="c-core-course">C — Core Course</h1>
+<blockquote>
+<p>An original study guide organized to cover the topics in the supplied C programming exercises. It follows the topic scope of Tatiana Aubonnet's course without reproducing her slides.</p>
+</blockquote>
+<h2 id="0-programming-and-compiling">0. Programming and compiling</h2>
+<p>A typical workflow: understand the problem, define inputs and outputs, choose an algorithm, write code, compile, test, and debug.</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcc<span class="w"> </span>-std<span class="o">=</span>c11<span class="w"> </span>-Wall<span class="w"> </span>-Wextra<span class="w"> </span>-Wpedantic<span class="w"> </span>-g<span class="w"> </span>main.c<span class="w"> </span>-o<span class="w"> </span>main
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>./main
+</span></code></pre></div>
+- <code>-std=c11</code>: use the C11 standard.
+- <code>-Wall -Wextra -Wpedantic</code>: enable useful warnings.
+- <code>-g</code>: debugging information.</p>
+<p>A minimal program:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello, world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h2 id="1-variables-types-and-expressions">1. Variables, types, and expressions</h2>
+<p>A variable has a type, name, value, and lifetime. Common C types include <code>char</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, and derived types. Use <code>sizeof(type)</code> to get its byte size (platform-dependent).</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14.25</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="input-and-output">Input and output</h3>
+<p><code>printf</code> prints; <code>scanf</code> reads and must receive addresses for variables it fills.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">"Invalid input</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">printf</span><span class="p">(</span><span class="s">"n = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span></code></pre></div>
+Common formats: <code>%d</code> int, <code>%u</code> unsigned, <code>%ld</code> long, <code>%f</code> float/double with <code>printf</code>, <code>%lf</code> double with <code>scanf</code>, <code>%c</code> character, <code>%s</code> string. With <code>printf</code>, format a <code>double</code> using <code>%f</code>. Never mismatch a format specifier and its argument type.</p>
+<h3 id="operators">Operators</h3>
+<ul>
+<li>Arithmetic: <code>+ - * / %</code> (<code>%</code> is for integers).</li>
+<li>Comparison: <code>== != &lt; &lt;= &gt; &gt;=</code> (comparison yields 0 or 1).</li>
+<li>Logical: <code>&amp;&amp; || !</code> (short-circuit evaluation).</li>
+<li>Assignment: <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>.</li>
+<li>Increment: <code>++i</code>, <code>i++</code> (expression values differ in some contexts).</li>
+<li>Cast: <code>int x = (int)3.8;</code> truncates toward zero.</li>
+</ul>
+<p>Integer division: <code>7 / 2</code> is <code>3</code>; <code>7.0 / 2</code> is <code>3.5</code>. Avoid integer overflow and division by zero. Use parentheses when precedence is unclear.</p>
+<h2 id="2-conditions-and-loops">2. Conditions and loops</h2>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<code>switch</code> suits discrete choices; each <code>case</code> typically ends with <code>break</code>.</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* known repetition */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* repeat while true */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* runs at least once */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condition</span><span class="p">);</span>
+</span></code></pre></div>
+<code>break</code> exits the current loop or switch; <code>continue</code> moves to the next iteration. Check termination conditions to avoid infinite loops.</p>
+<p><a href="../exercises/sheets/01_Variables_IF_Loops/">Exercise sheet — Variables, conditions, and loops</a></p>
+<h2 id="3-elementary-algorithms">3. Elementary algorithms</h2>
+<h3 id="accumulate-and-count">Accumulate and count</h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="minimum-maximum-and-average">Minimum, maximum, and average</h3>
+<p>For a non-empty array, initialize min and max from its first element, then scan the remainder. Compute the average using an appropriate sum type and floating-point division: <code>(double)sum / n</code>. Do not assume an <code>int</code> sum can never overflow.</p>
+<h3 id="swap-two-values">Swap two values</h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">swap_int</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="integer-digits">Integer digits</h3>
+<p>The last digit of a positive integer is <code>n % 10</code>; remove it using <code>n /= 10</code>. Handle zero and negative numbers, especially <code>INT_MIN</code>, which cannot simply be negated in an <code>int</code>.</p>
+<h2 id="4-arrays">4. Arrays</h2>
+<p>A static array contains elements of the same type stored contiguously. Indices range from <code>0</code> to <code>n-1</code>.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></code></pre></div>
+C does not automatically check bounds. Accessing outside the array is undefined behavior. A function receiving an array should also receive its length:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_array</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h3 id="multidimensional-arrays">Multidimensional arrays</h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">}};</span>
+</span></code></pre></div>
+Loop over rows, then columns. C arrays are stored row-major. A square matrix flattened into a 1D array of dimension <code>N</code> stores element <code>(i,j)</code> at <code>a[i * N + j]</code>.</p>
+<h2 id="5-functions-and-procedures">5. Functions and procedures</h2>
+<p>A function encapsulates a task and has a return type. A <code>void</code> function returns no value. Prototypes declare a signature before use.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
+</span></code></pre></div>
+Arguments are passed by value: changing a simple parameter does not change the caller's variable. To modify the caller's variable, pass a pointer. Local variables are scoped to their block. Avoid globals for ordinary program state.</p>
+<h3 id="multiple-outputs">Multiple outputs</h3>
+<p>C returns one value directly. To produce multiple results, use output pointer parameters, return a structure, or use an appropriate array.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">minmax</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[],</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">max</span><span class="p">);</span>
+</span></code></pre></div>
+Check preconditions (for example, <code>n &gt; 0</code> and valid pointers).</p>
+<p><a href="../exercises/sheets/02_Functions/">Exercise sheet — Functions</a></p>
+<h2 id="6-recursion">6. Recursion</h2>
+<p>A recursive function calls itself. It needs a base case, a call on a smaller problem, and progress toward the base case.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
+</span></code></pre></div>
+Recursion consumes the call stack; excessive depth can overflow it. Naive recursive Fibonacci demonstrates recursion but is very expensive; iteration is usually better for efficient computation.</p>
+<h2 id="7-pointers-and-addresses">7. Pointers and addresses</h2>
+<p>A pointer stores an object address (or <code>NULL</code>). <code>&amp;x</code> gives the address of <code>x</code>; <code>*p</code> accesses the pointed-to object.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c1">// x becomes 50</span>
+</span></code></pre></div>
+Only dereference valid, properly aligned pointers to live objects. <code>NULL</code> is a sentinel, not a usable address. <code>%p</code> prints an address; pass <code>(void *)p</code>.</p>
+<h3 id="pointer-arithmetic">Pointer arithmetic</h3>
+<p>If <code>p</code> points to an array element, <code>p + 1</code> refers to the next element. Arithmetic is only valid within the array or one past its end (without dereferencing that one-past position). <code>a[i]</code> is equivalent to <code>*(a + i)</code>.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* read *p */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="const-and-pointers"><code>const</code> and pointers</h3>
+<ul>
+<li><code>const int *p</code>: cannot modify the int through <code>p</code>.</li>
+<li><code>int *const p</code>: the pointer value stored in <code>p</code> cannot change.</li>
+<li><code>const int *const p</code>: neither the pointer nor the pointed value can be changed through this name.</li>
+</ul>
+<p><a href="../exercises/sheets/03_Pointers/">Exercise sheet — Pointers</a></p>
+<h2 id="8-strings">8. Strings</h2>
+<p>A C string is a <code>char</code> array terminated by <code>\0</code>. Capacity must include the terminator.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Ada"</span><span class="p">;</span>
+</span></code></pre></div>
+<code>strlen</code> counts characters before <code>\0</code>; <code>strcmp</code> compares lexicographically; <code>strcpy</code> copies but requires a large enough destination; <code>strcat</code> also requires enough capacity. Prefer size-controlled operations and check input results.</p>
+<p>Read a line:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fgets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">stdin</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* process */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<code>fgets</code> may keep <code>\n</code>; a line may be truncated if the buffer is too small. In-place string algorithms can use read/write pointers, with the write position never ahead of the read position.</p>
+<h2 id="9-dynamic-allocation">9. Dynamic allocation</h2>
+<p><code>malloc</code> reserves bytes; <code>calloc</code> reserves and zero-initializes; <code>realloc</code> resizes; <code>free</code> releases. Allocation functions return <code>NULL</code> on failure.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="cm">/* use a */</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">free</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+</span></code></pre></div>
+Check size calculations (overflow risk), allocation success, and free each allocation exactly once. Use a temporary pointer with <code>realloc</code> so failure does not lose the old block.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realloc</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">new_n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* a remains valid: handle failure */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+A dynamic 2D array can use an array of pointers (separate allocations) or one contiguous block. A contiguous block simplifies cleanup and improves locality.</p>
+<h2 id="10-structures-and-typedef">10. Structures and <code>typedef</code></h2>
+<p>A structure groups fields of different types.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">grade</span><span class="p">;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">}</span><span class="w"> </span><span class="n">Student</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Sam"</span><span class="p">,</span><span class="w"> </span><span class="mf">15.5</span><span class="p">};</span>
+</span></code></pre></div>
+Use <code>s.grade</code>; through a pointer, use <code>p-&gt;grade</code> (equivalent to <code>(*p).grade</code>). Structures can be passed by value or address. Use a pointer when modifying an object or avoiding a copy.
+Common exercise structures: point, rectangle, complex number, fraction, date, time, student, book, account, statistics. Check invariants (e.g. nonzero fraction denominator, valid balances and amounts).</p>
+<p><a href="../exercises/sheets/04_Functions-Structures/">Exercise sheet — Structures</a></p>
+<h2 id="11-library-functions-callbacks-and-qsort">11. Library functions, callbacks, and <code>qsort</code></h2>
+<p>A function can receive a pointer to another function (callback). Typical signature:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">apply_one</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="p">)(</span><span class="kt">int</span><span class="p">));</span>
+</span></code></pre></div>
+<code>qsort</code> from <code>&lt;stdlib.h&gt;</code> takes a comparator:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">compare_ints</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// avoids x-y overflow</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">}</span>
+</span></code></pre></div>
+The comparator returns a negative value, zero, or positive. Do not return <code>x-y</code> for extreme values. Implement descending order without overflow.</p>
+<p><a href="../exercises/sheets/03_Pointers/">Exercise sheet — Callbacks and qsort</a></p>
+<h2 id="12-linked-lists">12. Linked lists</h2>
+<p>A singly linked list consists of nodes with data and a pointer to the next node. The head may be <code>NULL</code>.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">}</span><span class="w"> </span><span class="n">Node</span><span class="p">;</span>
+</span></code></pre></div>
+- push-front: new node points to old head, then head changes;
+- push-back: traverse to last node or keep a tail pointer;
+- deletion: connect predecessor to successor and free removed node;
+- length: count nodes during traversal;
+- reversal: maintain <code>prev</code>, <code>current</code>, <code>next</code>;
+- merge sorted lists: advance two cursors, choosing the smaller;
+- cycle detection: Floyd's tortoise-and-hare, pointers at different speeds.</p>
+<p>Functions that change the head should receive <code>Node **head</code> or return the new head. Never use a node after <code>free</code>.</p>
+<p><a href="../exercises/sheets/06_Sort-Search-Lists/">Exercise sheet — Linked lists</a></p>
+<h2 id="13-searching-and-sorting">13. Searching and sorting</h2>
+<h3 id="searching">Searching</h3>
+<ul>
+<li>Linear: scan elements, <code>O(n)</code>.</li>
+<li>Binary: requires sorted data; halve the interval each step, <code>O(log n)</code>.</li>
+<li>Min/max: one scan, <code>O(n)</code>.</li>
+<li>Two-sum with two pointers: on sorted data, move left/right based on the sum.</li>
+</ul>
+<h3 id="basic-sorts">Basic sorts</h3>
+<ul>
+<li>Selection: choose minimum of unsorted part, <code>O(n²)</code>.</li>
+<li>Insertion: insert each element into sorted prefix, worst-case <code>O(n²)</code>, stable.</li>
+<li>Bubble: swap adjacent elements; early stop if no swap, worst-case <code>O(n²)</code>.</li>
+</ul>
+<h3 id="advanced-sorts-in-the-exercise-scope">Advanced sorts in the exercise scope</h3>
+<ul>
+<li>Merge sort: divide, sort, merge; <code>O(n log n)</code>, stable, auxiliary memory.</li>
+<li>Quicksort: partition around pivot; average <code>O(n log n)</code>, worst <code>O(n²)</code>.</li>
+<li>Counting sort: for a limited integer range <code>[0,k]</code>; <code>O(n+k)</code>.</li>
+<li>LSD radix: process digits right-to-left with a stable sort; simple form supports nonnegative integers.</li>
+<li>Heap sort: build max-heap and extract; <code>O(n log n)</code>, in-place, unstable.</li>
+<li>Quickselect: partition to find kth element without sorting the entire array.</li>
+<li>Deduplication: compact unique values in a sorted array in-place.</li>
+</ul>
+<p><a href="../exercises/sheets/06_Sort-Search-Lists/">Exercise sheet — Sorting and searching</a></p>
+<h2 id="14-files">14. Files</h2>
+<p>Standard streams: <code>stdin</code>, <code>stdout</code>, <code>stderr</code>. Files use <code>FILE *</code> and <code>fopen</code>.
+<div class="language-c highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">,</span><span class="w"> </span><span class="s">"r"</span><span class="p">);</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">perror</span><span class="p">(</span><span class="s">"data.txt"</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="cm">/* read */</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* handle error */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+Modes: <code>r</code> read, <code>w</code> write/truncate, <code>a</code> append; add <code>b</code> for binary (<code>rb</code>, <code>wb</code>, etc.); <code>+</code> enables reading/writing. Check open, read, write, and close operations.
+- Text: <code>fgets</code>, <code>fprintf</code>, <code>fputs</code>, <code>fgetc</code>.
+- Binary: <code>fread</code>, <code>fwrite</code>; these transfer bytes, not a universally portable struct format (padding, endianness, type sizes).
+- Copy: read with a buffer, then write.
+- Simple CSV: parse a line and convert with error checks; real CSV can contain quoted fields and escaped delimiters, so plain <code>strtok</code> is insufficient.
+- <code>fseek</code>, <code>ftell</code>: reposition and query position, subject to file type and mode.
+- Errors: check <code>ferror</code>, use <code>feof</code> correctly, and inspect function return values.</p>
+<p><a href="../exercises/sheets/05_Files/">Exercise sheet — Files</a></p>
+<h2 id="15-coverage-checklist">15. Coverage checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Variables, conversions, expressions, I/O, conditions, loops</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 1D/2D arrays, sums, averages, min/max, matrices, trace/transpose</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Functions, procedures, output parameters, recursion</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Pointers, double pointers, <code>const</code>, arithmetic, callbacks</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Strings, length, copy, search, tokenization, in-place editing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Allocation, reallocation, freeing, dynamic arrays</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Structures, arrays of structures, structure pointers</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Linked lists: operations, merge, reverse, cycles</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Searching, sorting, selection, deduplication</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Text and binary files, simple CSV, copy, transform, statistics</li>
+</ul>
+<h2 id="16-additional-calculation-and-string-exercises">16. Additional calculation and string exercises</h2>
+<h3 id="gcd-lcm-and-primes">GCD, LCM, and primes</h3>
+<p>Euclid's algorithm computes GCD: while <code>b != 0</code>, replace <code>(a,b)</code> with <code>(b,a%b)</code>. The final nonzero <code>a</code> is the GCD. LCM (when handled without overflow) is <code>a / gcd(a,b) * b</code>; dividing before multiplying reduces overflow risk.</p>
+<p>To test whether <code>n</code> is prime, handle <code>n &lt; 2</code>, then try divisors until <code>d*d &gt; n</code> (or use an equivalent overflow-safe condition). The next-prime problem increments candidates and tests them.</p>
+<h3 id="quadratic-roots">Quadratic roots</h3>
+<p>For <code>ax² + bx + c = 0</code>, if <code>a == 0</code>, handle the linear equation. Otherwise compute <code>Δ = b² - 4ac</code>. <code>Δ &gt; 0</code> gives two real roots, <code>Δ == 0</code> one repeated root, and <code>Δ &lt; 0</code> no real roots. Check division and numeric limits.</p>
+<h3 id="variance-and-standard-deviation">Variance and standard deviation</h3>
+<p>For <code>n</code> population values, mean <code>μ = Σxᵢ/n</code>; population variance is <code>Σ(xᵢ-μ)²/n</code>, and standard deviation is the square root of variance. A two-pass formula is easy to understand. For large data or values close together, a more numerically stable method may be preferable.</p>
+<h3 id="palindrome-and-string-reversal">Palindrome and string reversal</h3>
+<p>Compare characters from both ends, moving toward the center. If spaces and case are ignored, normalize each character before comparing. To reverse in place, swap endpoint characters until the cursors cross; the string must be mutable.</p>
+<p><a href="../exercises/sheets/01_Variables_IF_Loops/">Exercise sheet — Calculations and strings</a></p>
+<h2 id="17-common-structures-rules-and-validation">17. Common structures: rules and validation</h2>
+<ul>
+<li><strong>Point / rectangle / circle / box</strong>: geometry; validate nonnegative dimensions and radii.</li>
+<li><strong>Complex number</strong>: add fields; modulus <code>sqrt(re*re + im*im)</code>.</li>
+<li><strong>Fraction</strong>: denominator must not be zero; normalize using GCD; use a consistent sign convention (e.g. positive denominator).</li>
+<li><strong>Date</strong>: check leap year; validate month days; calculate day of year by summing preceding months.</li>
+<li><strong>Time</strong>: normalize seconds/minutes by carrying overflow; define whether hours wrap modulo 24.</li>
+<li><strong>RGB</strong>: each channel is in 0–255; grayscale conversion should specify its formula/approximation.</li>
+<li><strong>Polynomial</strong>: evaluate <code>a*x*x + b*x + c</code>.</li>
+<li><strong>Statistics</strong>: compute min/max/mean/variance while scanning; handle <code>n == 0</code>.</li>
+<li><strong>Bank account</strong>: validate positive amounts, sufficient funds for withdrawals, and report success/failure. For real currency, avoid naive <code>double</code> calculations.</li>
+</ul>
+<h2 id="18-matrices-and-dynamic-arrays-additional-operations">18. Matrices and dynamic arrays: additional operations</h2>
+<p>The trace of a square matrix is the sum of its diagonal <code>A[i][i]</code>. Transposition swaps <code>A[i][j]</code> and <code>A[j][i]</code> for <code>j &gt; i</code> in-place for a square matrix. Matrix-vector multiplication computes a sum of products for each row. For flattened matrices, use one consistent index formula and document the dimension.</p>
+<p>For dynamic-array <code>push_back</code>, when capacity is full, increase capacity (often doubling), call <code>realloc</code> through a temporary pointer, then append and update the size. Distinguish <code>size</code> (used elements) from <code>capacity</code> (reserved storage).</p>
+<h2 id="19-detailed-exercise-coverage">19. Detailed exercise coverage</h2>
+<p>This checklist gathers the topics visible in the six exercise PDFs: output and arithmetic, Celsius/Fahrenheit conversion, maxima, even/odd, quadratic roots, multiplication tables, factorial, Fibonacci, sum to n, digit reversal/count, primality, GCD/LCM, functions and recursion, sum/average/min/max, linear and binary search, selection/insertion/bubble/merge/quick/counting/radix/heap sorts, quickselect, deduplication, two-sum, pointers and output parameters, strings (length/copy/vowels/whitespace/palindrome/reverse/tokenization), matrices (trace/transpose/multiplication/flattened indexing), callbacks and <code>qsort</code>, structures (point, rectangle, complex, fraction, student, time, date, RGB, polynomial, circle, matrix, book, box, statistics, person, account), linked lists (push-front/back, deletion, length, reversal, merge, cycle), and files (text, append, binary copy, counters, patterns, replacement, sorted merge, CSV, binary arrays, binary structures, splitting, sorting/deduplication, comparison, tail, CRLF/LF, checksum, byte histogram, reverse, and prefix/header).</p>
+<p><a href="../exercises/">Practice with the exercises</a></p>
+<hr />
+<h2 id="credits-and-sources">Credits and Sources</h2>
+<p>This study guide is based on <strong>Tatiana Aubonnet's</strong> original C course (2008), drawing primarily from the exercises shared by <a href="https://github.com/S-L-A-K-E-R"><strong>S-L-A-K-E-R</strong></a>, which played a particularly important role in defining the topics covered and the structure of this guide.</p>
+<p>Adaptation, organization, and writing: <a href="https://github.com/1KuMo"><strong>1KuMo</strong></a>.</p>
+<p>AI tools were also used to assist with translation, layout, and content organization.</p>
+<p>Special thanks to <strong>Tatiana Aubonnet</strong> for her original course, which served as the foundation for this work.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

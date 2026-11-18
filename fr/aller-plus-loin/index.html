@@ -1,0 +1,1513 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A structured C programming study guide">
+      
+      
+      
+      
+        <link rel="prev" href="../exercices/">
+      
+      
+        <link rel="next" href="../../en/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Aller plus loin - C Programming Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-aller-plus-loin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="C Programming Course" class="md-header__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            C Programming Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aller plus loin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="C Programming Course" class="md-nav__button md-logo" aria-label="C Programming Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    C Programming Course
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/1KuMo/C_Course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Français
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Français
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cours/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Cours principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aller plus loin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-complexite-raisonner-sur-le-cout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Complexité : raisonner sur le coût
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recursion-arbre-dappels-cout-et-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Récursion : arbre d'appels, coût et alternatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Récursion : arbre d&#39;appels, coût et alternatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diviser-pour-regner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diviser pour régner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-choisir-un-tri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Choisir un tri
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-quicksort-et-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Quicksort et partition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tas-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tas (heap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recherche-et-selection-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Recherche et sélection avancées
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-listes-chainees-variantes-et-invariants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Listes chaînées : variantes et invariants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Listes chaînées : variantes et invariants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertion-et-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertion et suppression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-de-listes-triees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fusion de listes triées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-de-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Détection de cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-memoire-et-robustesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Mémoire et robustesse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Mémoire et robustesse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reallocation-sans-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réallocation sans perte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debogage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Débogage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chaines-et-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chaînes et parsing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fichiers-strategie-de-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Fichiers : stratégie de traitement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-donnees-binaires-et-portabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Données binaires et portabilité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-fonctions-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Fonctions de rappel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-exercices-de-synthese-proposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Exercices de synthèse proposés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-et-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crédit et provenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../en/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/course/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C - Core course
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/exercises/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../en/beyond-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-complexite-raisonner-sur-le-cout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Complexité : raisonner sur le coût
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-recursion-arbre-dappels-cout-et-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Récursion : arbre d'appels, coût et alternatives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Récursion : arbre d&#39;appels, coût et alternatives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diviser-pour-regner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diviser pour régner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-choisir-un-tri" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Choisir un tri
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-quicksort-et-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Quicksort et partition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tas-heap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tas (heap)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-recherche-et-selection-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Recherche et sélection avancées
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-listes-chainees-variantes-et-invariants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Listes chaînées : variantes et invariants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Listes chaînées : variantes et invariants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insertion-et-suppression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insertion et suppression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-de-listes-triees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fusion de listes triées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-de-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Détection de cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-memoire-et-robustesse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Mémoire et robustesse
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Mémoire et robustesse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ownership
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reallocation-sans-perte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Réallocation sans perte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debogage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Débogage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-chaines-et-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Chaînes et parsing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fichiers-strategie-de-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Fichiers : stratégie de traitement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-donnees-binaires-et-portabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Données binaires et portabilité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-fonctions-de-rappel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Fonctions de rappel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-exercices-de-synthese-proposes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Exercices de synthèse proposés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-a-retenir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. À retenir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-et-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crédit et provenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="c-aller-plus-loin">C — Aller plus loin</h1>
+<blockquote>
+<p>Extensions au cours de base. Ces sujets servent à renforcer la qualité, la performance, la conception et l'autonomie. Ils sont complémentaires, pas nécessaires à chaque exercice de base.</p>
+</blockquote>
+<h2 id="1-complexite-raisonner-sur-le-cout">1. Complexité : raisonner sur le coût</h2>
+<p>La complexité décrit l'évolution du travail ou de la mémoire avec la taille <code>n</code> des données. On se concentre souvent sur le terme dominant :</p>
+<table>
+<thead>
+<tr>
+<th>Classe</th>
+<th>Exemple</th>
+<th>Intuition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>O(1)</code></td>
+<td>accès <code>a[i]</code></td>
+<td>coût constant</td>
+</tr>
+<tr>
+<td><code>O(log n)</code></td>
+<td>recherche dichotomique</td>
+<td>réduire le problème par facteur</td>
+</tr>
+<tr>
+<td><code>O(n)</code></td>
+<td>parcours, min/max</td>
+<td>chaque élément une fois</td>
+</tr>
+<tr>
+<td><code>O(n log n)</code></td>
+<td>merge sort, heap sort</td>
+<td>diviser + traitement linéaire</td>
+</tr>
+<tr>
+<td><code>O(n²)</code></td>
+<td>double boucle, tri insertion/selection au pire</td>
+<td>paires d'éléments</td>
+</tr>
+<tr>
+<td><code>O(2^n)</code></td>
+<td>certains parcours exhaustifs</td>
+<td>explosion combinatoire</td>
+</tr>
+</tbody>
+</table>
+<p>Distinguer meilleur, moyen et pire cas; distinguer complexité temporelle et espace. Une complexité asymptotique n'indique pas exactement le temps réel : constantes, cache, allocations et données comptent.</p>
+<h2 id="2-recursion-arbre-dappels-cout-et-alternatives">2. Récursion : arbre d'appels, coût et alternatives</h2>
+<p>Pour chaque fonction récursive, identifier le cas de base, la taille du sous-problème, la profondeur et le nombre d'appels. La récursion peut être naturelle (parcours d'arbre) mais coûte parfois plus de mémoire qu'une boucle.</p>
+<h3 id="diviser-pour-regner">Diviser pour régner</h3>
+<ol>
+<li>Diviser les données en sous-problèmes.</li>
+<li>Résoudre chaque sous-problème.</li>
+<li>Combiner leurs résultats.</li>
+</ol>
+<p>Merge sort en est un exemple : les divisions ont une profondeur logarithmique et chaque niveau fusionne <code>n</code> éléments, ce qui donne <code>O(n log n)</code>.</p>
+<h2 id="3-choisir-un-tri">3. Choisir un tri</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithme</th>
+<th>Temps typique / pire</th>
+<th>Stable</th>
+<th>Mémoire auxiliaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insertion</td>
+<td><code>O(n²)</code> / <code>O(n²)</code></td>
+<td>oui</td>
+<td><code>O(1)</code></td>
+</tr>
+<tr>
+<td>Sélection</td>
+<td><code>O(n²)</code> / <code>O(n²)</code></td>
+<td>non (version classique)</td>
+<td><code>O(1)</code></td>
+</tr>
+<tr>
+<td>Bulles</td>
+<td><code>O(n²)</code> / <code>O(n²)</code></td>
+<td>oui</td>
+<td><code>O(1)</code></td>
+</tr>
+<tr>
+<td>Merge sort</td>
+<td><code>O(n log n)</code> / <code>O(n log n)</code></td>
+<td>oui</td>
+<td><code>O(n)</code></td>
+</tr>
+<tr>
+<td>Quicksort</td>
+<td><code>O(n log n)</code> moyen / <code>O(n²)</code></td>
+<td>non</td>
+<td>pile de récursion</td>
+</tr>
+<tr>
+<td>Heap sort</td>
+<td><code>O(n log n)</code> / <code>O(n log n)</code></td>
+<td>non</td>
+<td><code>O(1)</code></td>
+</tr>
+<tr>
+<td>Counting</td>
+<td><code>O(n+k)</code></td>
+<td>stable si reconstruit correctement</td>
+<td><code>O(k)</code></td>
+</tr>
+<tr>
+<td>Radix LSD</td>
+<td>dépend du nombre de chiffres et de la base</td>
+<td>stable par passe</td>
+<td>buffers</td>
+</tr>
+</tbody>
+</table>
+<p>Le choix dépend des données, de la stabilité requise, de la mémoire, et de la facilité de mise en œuvre. Tester sur tableaux vides, singleton, déjà triés, inversés, avec doublons et valeurs extrêmes.</p>
+<h2 id="4-quicksort-et-partition">4. Quicksort et partition</h2>
+<p>La partition organise les éléments relativement au pivot. Le pivot final (Lomuto) est simple à comprendre mais peut produire des partitions déséquilibrées avec des données déjà ordonnées ou beaucoup de doublons. Une version robuste peut choisir un pivot aléatoire ou médian de trois et gérer les valeurs égales en partition trois voies. Toujours vérifier les indices et la condition de récursion.</p>
+<h2 id="5-tas-heap">5. Tas (heap)</h2>
+<p>Un tas max est un arbre binaire complet où chaque parent est supérieur ou égal à ses enfants. Représentation en tableau (indices à partir de zéro) :
+- parent de <code>i</code> : <code>(i-1)/2</code> (si <code>i&gt;0</code>)
+- enfant gauche : <code>2*i+1</code>
+- enfant droit : <code>2*i+2</code></p>
+<p>Construire le tas en descendant depuis le dernier parent. <code>sift_down</code> restaure la propriété après échange. Heapsort extrait répétitivement le maximum vers la fin. Le tas permet aussi de maintenir efficacement un top-k.</p>
+<h2 id="6-recherche-et-selection-avancees">6. Recherche et sélection avancées</h2>
+<ul>
+<li>Recherche binaire : invariants de l'intervalle; utiliser <code>lo + (hi-lo)/2</code> pour éviter le débordement de <code>lo+hi</code>.</li>
+<li>Quickselect : partition puis continuer uniquement dans le côté contenant le rang demandé. Rang 1-indexé et indice 0-indexé doivent être clairement distingués.</li>
+<li>Two pointers : utile pour tableaux triés, fenêtres ou rapprochement; expliquer pourquoi le déplacement choisi ne peut pas éliminer la solution.</li>
+<li>Déduplication : invariant de compactage — le préfixe écrit contient déjà les valeurs distinctes.</li>
+</ul>
+<h2 id="7-listes-chainees-variantes-et-invariants">7. Listes chaînées : variantes et invariants</h2>
+<h3 id="insertion-et-suppression">Insertion et suppression</h3>
+<p>Privilégier les fonctions qui reçoivent <code>Node **head</code> pour pouvoir modifier la tête. Chaque opération doit préserver :
+- tous les nœuds accessibles depuis la tête;
+- aucune perte de chaîne;
+- liens cohérents;
+- libération exactement une fois des nœuds supprimés.</p>
+<h3 id="fusion-de-listes-triees">Fusion de listes triées</h3>
+<p>Maintenir un pointeur de queue du résultat et deux curseurs de lecture. Choisir le plus petit élément, l'attacher, puis avancer son curseur. Réutiliser les nœuds (fusion destructive) ou créer une copie (fusion non destructive); préciser le choix.</p>
+<h3 id="inversion">Inversion</h3>
+<p>Invariant : <code>prev</code> représente la partie déjà inversée; <code>current</code> est le prochain nœud à traiter; <code>next</code> est sauvegardé avant modification du lien.</p>
+<h3 id="detection-de-cycle">Détection de cycle</h3>
+<p>Floyd : avancer lentement d'un pas et rapidement de deux. S'ils se rencontrent, un cycle existe. Si le rapide atteint <code>NULL</code> (ou son prochain), la liste est acyclique. Ne pas dereferencer <code>NULL</code>.</p>
+<h2 id="8-memoire-et-robustesse">8. Mémoire et robustesse</h2>
+<h3 id="ownership">Ownership</h3>
+<p>Pour chaque allocation, documenter qui en est responsable, qui la libère, et si une fonction transfère la propriété. Éviter les pointeurs pendants, double-free, fuites et accès après libération.</p>
+<h3 id="reallocation-sans-perte">Réallocation sans perte</h3>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">realloc</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">new_size</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">new_size</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// ptr reste utilisable; traiter l'échec</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+En pratique, clarifier le cas <code>new_size == 0</code> selon la version du standard et préférer une libération explicite. Vérifier que <code>new_count * sizeof *ptr</code> ne déborde pas <code>SIZE_MAX</code>.</p>
+<h3 id="debogage">Débogage</h3>
+<p>Compiler avec avertissements, puis utiliser un débogueur et des outils de vérification mémoire disponibles sur le système. Tester chaque fonction avec cas limites et assertions de préconditions. Ne pas ignorer les warnings.</p>
+<h2 id="9-chaines-et-parsing">9. Chaînes et parsing</h2>
+<p>Une chaîne reçue n'est pas forcément complète, bien formée ou assez longue. Définir les règles de parsing : séparateur, espaces, lignes vides, champs manquants, valeurs invalides, limites de buffer, encodage. <code>strtok</code> modifie la chaîne et ne traite pas les CSV complexes. Pour un format CSV complet, gérer les guillemets, les séparateurs dans les champs, les échappements et les lignes.</p>
+<p>Pour tokeniser avec pointeurs : identifier chaque début de token, remplacer le séparateur par <code>\0</code> si la chaîne est modifiable, puis stocker les adresses des tokens; vérifier la capacité du tableau de sortie.</p>
+<h2 id="10-fichiers-strategie-de-traitement">10. Fichiers : stratégie de traitement</h2>
+<ul>
+<li>Pour copier : tampon fixe, vérifier le nombre d'octets lus et écrits, puis les erreurs.</li>
+<li>Pour comparer : comparer blocs d'octets, repérer la première différence et tenir compte des tailles distinctes.</li>
+<li>Pour compter lignes/mots/octets : définir précisément la convention de comptage (ligne terminée par LF ou dernière ligne sans LF; mot défini par espaces).</li>
+<li>Pour remplacer un texte : streaming avec tampon de recouvrement si motif peut traverser deux blocs; ou charger en mémoire en vérifiant la taille.</li>
+<li>Pour <code>tail</code> : stratégie simple en mémoire ou stratégie de lecture à rebours; choisir selon la taille du fichier.</li>
+<li>Pour découper : compteur de lignes et nommage déterministe des morceaux.</li>
+<li>Pour normaliser CRLF : traiter <code>\r\n</code> comme une unité, éviter de transformer les CR isolés sans décision explicite.</li>
+<li>Pour checksum : distinguer hash pédagogique (djb2) et fonction cryptographique; un checksum simple ne protège pas contre les adversaires.</li>
+</ul>
+<h2 id="11-donnees-binaires-et-portabilite">11. Données binaires et portabilité</h2>
+<p><code>fwrite(&amp;object, sizeof object, 1, file)</code> peut sauvegarder une structure pour un usage local, mais n'est pas un format durable universel. Les différences de padding, d'endianness, de largeur de type, de représentation et de version de structure peuvent rendre un fichier incompatible. Pour un format portable, définir un format explicite (types de largeur fixe, ordre des octets, version, validation) et sérialiser les champs.</p>
+<h2 id="12-fonctions-de-rappel">12. Fonctions de rappel</h2>
+<p>Un pointeur de fonction permet de paramétrer une opération : transformation, comparaison, intégration numérique. Vérifier la signature et ne jamais appeler un pointeur de fonction nul.</p>
+<p>Exemple de contrat :
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">Transform</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">map_ints</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Transform</span><span class="w"> </span><span class="n">fn</span><span class="p">);</span>
+</span></code></pre></div>
+Un callback doit avoir un contrat clair : effets de bord permis, valeur de retour, validité des arguments et durée de vie des données.</p>
+<h2 id="13-exercices-de-synthese-proposes">13. Exercices de synthèse proposés</h2>
+<ol>
+<li>Tableau dynamique avec push, pop, capacité doublée, erreurs d'allocation.</li>
+<li>Bibliothèque de tri générique avec comparateur et tests.</li>
+<li>Liste de contacts (struct) avec recherche, suppression, tri et sauvegarde.</li>
+<li>CSV de notes : parsing contrôlé, statistiques, classement et rapport.</li>
+<li>Comparateur de fichiers affichant le premier octet différent.</li>
+<li>Mini <code>tail</code> avec gestion des très longues lignes.</li>
+<li>Fusion non destructive de listes triées.</li>
+<li>Vérificateur de liste (longueur, cycle, ordre).</li>
+<li>Top-k avec tas.</li>
+<li>Benchmark de tris sur données variées, mesures et analyse de complexité.</li>
+</ol>
+<h2 id="14-a-retenir">14. À retenir</h2>
+<p>La progression ne consiste pas à mémoriser des algorithmes isolés. Pour chaque solution, savoir expliquer : son invariant, ses préconditions, ses cas limites, sa complexité, la gestion de la mémoire, et comment le tester.</p>
+<hr />
+<h2 id="credit-et-provenance">Crédit et provenance</h2>
+<p>Support de révision réalisé à partir du cours de <strong>Tatiana Aubonnet</strong> (C, 2008), en s'appuyant principalement sur les exercices partagés par <a href="https://github.com/S-L-A-K-E-R"><strong>S-L-A-K-E-R</strong></a>, qui ont particulièrement contribué à définir les notions abordées et la structure de ce support.</p>
+<p>Adaptation, organisation et rédaction : <a href="https://github.com/1KuMo"><strong>1KuMo</strong></a>.</p>
+<p>Des outils d'intelligence artificielle ont également été utilisés pour assister la traduction, la mise en page et l'organisation du contenu.</p>
+<p>Merci à <strong>Tatiana Aubonnet</strong> pour son cours original, qui a servi de base à ce travail.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
