@@ -45,7 +45,7 @@ if (scanf("%d", &n) != 1) {
 }
 printf("n = %d\n", n);
 ```
-Common formats: `%d` int, `%u` unsigned, `%ld` long, `%f` float/double with `printf`, `%lf` double with `scanf`, `%c` character, `%s` string. With `printf`, format a `double` using `%f`. Never mismatch a format specifier and its argument type.
+Common formats: `%d` / `%i` int, `%u` unsigned, `%ld` long, `%f` float/double with `printf`, `%lf` double with `scanf`, `%c` character, `%s` string. With `printf`, format a `double` using `%f`. Never mismatch a format specifier and its argument type.
 
 ### Operators
 - Arithmetic: `+ - * / %` (`%` is for integers).
